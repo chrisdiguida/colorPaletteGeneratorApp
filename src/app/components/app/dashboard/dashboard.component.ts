@@ -16,11 +16,11 @@ export class DashboardComponent implements OnInit {
   appSwitchOptions: AppSwitchOption[] = [
     {
       text: 'Create',
-      value: 'app/create',
+      value: '/app/create',
     },
     {
       text: 'Saved',
-      value: 'app/saved',
+      value: '/app/saved',
     },
   ];
 
@@ -33,14 +33,6 @@ export class DashboardComponent implements OnInit {
     this.appUsersService.currentAppUser$.subscribe(
       (res) => (this.appUser = res)
     );
-
-    this.appSwitchOptions.forEach((x) => {
-      if (this.router.url.includes(x.value)) {
-        x.checked = true;
-      }
-    });
-
-    this.onSwitchChanged(this.router.url);
   }
 
   onSwitchChanged(path: string) {

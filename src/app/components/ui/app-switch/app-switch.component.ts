@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppSwitchOption } from '../../../models/appSwitchOption';
 
 @Component({
@@ -6,17 +7,20 @@ import { AppSwitchOption } from '../../../models/appSwitchOption';
   templateUrl: './app-switch.component.html',
   styleUrl: './app-switch.component.css',
 })
-export class AppSwitchComponent implements OnInit {
+export class AppSwitchComponent {
   @Input() options: AppSwitchOption[] = [];
   @Output() optionChanged = new EventEmitter<AppSwitchOption>();
-  selectedOption: string;
 
-  ngOnInit(): void {
-    this.selectedOption = this.options.find((x) => x.checked).value;
-  }
+  constructor(private router: Router) {}
 
   selectOption(option: AppSwitchOption) {
-    this.selectedOption = option.value;
     this.optionChanged.emit(option);
+  }
+
+  defineSelectedOption() {
+    const selectedOption = this.options.find(
+      (x) => x.value === this.router.url
+    );
+    return selectedOption;
   }
 }
