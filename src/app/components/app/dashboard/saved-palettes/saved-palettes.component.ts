@@ -80,6 +80,7 @@ export class SavedPalettesComponent implements OnInit {
 
   openUpdatePaletteModal(palette: PaletteDto) {
     this.paletteToUpdate = palette;
+    this.paletteNameFormControl.setValue(palette.name);
   }
 
   async closeUpdatePaletteModal() {

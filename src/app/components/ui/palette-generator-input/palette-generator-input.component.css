@@ -75,7 +75,9 @@
     box-sizing: border-box;
   }
 
-  .palette-generator-input > input[type="text"] {
+  .palette-generator-input > input[type="text"]:focus,
+  .palette-generator-input > input[type="text"]:active,
+  .palette-generator-input > input[type="text"]:hover {
     width: 30%;
     height: 40px;
   }

@@ -34,7 +34,7 @@
   </div>
 </app-modal>
 <app-modal
-  [title]="'Update Palette Name ' + paletteToUpdate?.name"
+  [title]="'Update Palette Name \'' + paletteToUpdate?.name + '\''"
   (closeModal)="paletteToUpdate = null"
   [showModal]="!!paletteToUpdate"
   width="400px"
@@ -47,7 +47,7 @@
     ></app-input>
     <app-button
       [enableSpinner]="loadingSource === 'update'"
-      text="Create"
+      text="Update"
       (clickEvent)="updatePalette()"
     ></app-button>
   </div>
