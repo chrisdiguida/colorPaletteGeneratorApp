@@ -55,3 +55,9 @@ app-switch {
   display: block;
   width: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+  .app-page {
+    padding: 20px 10px;
+  }
+}
