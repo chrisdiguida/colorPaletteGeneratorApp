@@ -4,7 +4,7 @@
 
 **API Swagger: https://api-color-palette-generator.azurewebsites.net/swagger/index.html**
 
-This project consists of Color Palette Generator. By inserting a HEX color, it is possible to obtain a color palette based on the color, examples of how the generated colors would look like in some UI components and the possibility to export the generated palette as CSS variables.
+This project consists of a Color Palette Generator. By inserting a HEX color, it is possible to obtain a color palette based on the color, examples of how the generated colors would look like in some UI components and the possibility to export the generated palette as CSS variables.
 
 ## Tech Stack
 
@@ -18,10 +18,10 @@ This project consists of Color Palette Generator. By inserting a HEX color, it i
 
 ### User authentication
 
-- **Sign Up**: Through this app it is possible to create an account for the generated color palettes.
-- **Sign In**: Through this app it is possible to access to the created account to store and access to all the user's data.
-- **Password Hashing**: On the back-end we are storing the password through an hashing algorith to respect the security standards.
-- **JWT authentication**: On the back-end we are implementing JWT authentication to secure our API.
+- **Sign Up**: Through this app, it is possible to create an account for the generated color palettes.
+- **Sign In**: Through this app, it is possible to access to the created account to store and access to all the user's data.
+- **Password Hashing**: On the back-end, we are storing the password through a hashing algorithm to respect the security standards.
+- **JWT authentication**: On the back-end, we are implementing JWT authentication to secure our API.
 
 **Sign Up**
 
@@ -33,7 +33,7 @@ This project consists of Color Palette Generator. By inserting a HEX color, it i
 
 ### Palette Generation
 
-- **Palette generation**: Through the input it is possible to generate a palette to test how it would look like. Note that on the DB, we are checking if the user already has the inserted color.
+- **Palette generation**: Through the input, it is possible to generate a palette to test how it would look like. Note that on the DB, we are checking if the user already has the inserted color.
 - **Saving a Palette**: Through the "Save" button, it is possible to save the generated palette color and store in the DB. Before to store the inserted color, we first check on the DB if the user already has this palette.
 
 **Palette Generation**
@@ -46,7 +46,7 @@ This project consists of Color Palette Generator. By inserting a HEX color, it i
 
 ### Palette Storage
 
-- **Retrieving Stored Palettes**: On the saved tab, the app will retrieve all the stored palettes in the DB. Also, it is important to note that it is possible to filter by 'name' or 'color' and also pagination is applied (10 palettes at time).
+- **Retrieving Stored Palettes**: On the saved tab, the app will retrieve all the stored palettes in the DB. Also, it is important to note that it is possible to filter by 'name' or 'color' and also pagination is applied (10 palettes at a time).
 - **Update Palette Name**: Through the 'Update Name' button, it is possible to update the name of the selected palette.
 - **Delete a Palette**: Through the 'Delete' button, it is possible to delete the selected palette.
 
@@ -62,8 +62,8 @@ This project consists of Color Palette Generator. By inserting a HEX color, it i
 
 ### UI
 
-- **Built-in Components**: All components have been manually created and no external library has been used.
-- **Mobile Version**: Note that it is also avaible a mobile version of the app.
+- **Built-in Components**: All components have been manually created, and no external library has been used.
+- **Mobile Version**: Note that it is also available a mobile version of the app.
 - 
 **Mobile Version**
   
