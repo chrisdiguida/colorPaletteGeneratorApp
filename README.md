@@ -64,7 +64,7 @@ This project consists of a Color Palette Generator. By inserting a HEX color, it
 
 - **Built-in Components**: All components have been manually created, and no external library has been used.
 - **Mobile Version**: Note that it is also available a mobile version of the app.
-- 
+
 **Mobile Version**
   
 ![image](https://github.com/chrisdiguida/colorPaletteGeneratorApp/assets/171926333/823c311f-a490-4b19-8f26-9ee1474cf77a)
