@@ -1,4 +1,4 @@
-# Introduction
+# Introduction - Saal Digital Project
 
 **Website: https://color-palette-generator.chrisdevguide.com**
 
