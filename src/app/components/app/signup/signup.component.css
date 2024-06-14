@@ -13,6 +13,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   flex-direction: column;
+  gap: 30px;
 }
 
 .sign-up-container {
