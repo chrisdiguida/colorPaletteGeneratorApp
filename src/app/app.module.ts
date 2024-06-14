@@ -23,6 +23,7 @@ import './extensions/formControlExtensions';
 import './extensions/formGroupExtensions';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
+import { SignatureComponent } from './components/ui/signature/signature.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
     SavedPalettesComponent,
     AppPaletteComponent,
     PaletteExamplesComponent,
+    SignatureComponent,
   ],
   imports: [
     BrowserModule,
