@@ -64,3 +64,14 @@ p:last-of-type {
 .warning {
   color: orange;
 }
+
+@media only screen and (max-width: 768px) {
+  .notifications-container {
+    bottom: 10px;
+    left: 10px;
+  }
+  .notification {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

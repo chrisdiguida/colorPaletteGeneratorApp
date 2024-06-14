@@ -77,5 +77,6 @@
 
   .palette-generator-input > input[type="text"] {
     width: 30%;
+    height: 40px;
   }
 }
