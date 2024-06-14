@@ -12,6 +12,7 @@ main {
   background-image: url("/assets/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  flex-direction: column;
 }
 
 .sign-up-container {
