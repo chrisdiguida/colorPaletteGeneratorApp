@@ -29,6 +29,13 @@ p {
   margin: 0;
 }
 
+input,
+textarea,
+select,
+button {
+  font-size: 16px;
+}
+
 .pointer:hover {
   cursor: pointer;
 }
