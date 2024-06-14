@@ -1,0 +1,26 @@
+<main>
+  <h1>Color Palettes Generator</h1>
+  <div class="sign-up-container">
+    <h2>Sign in to your account</h2>
+    <p>
+      Don’t have an account?
+      <span (click)="navigateToSignUp()" class="link pointer">Sign Up!</span>
+    </p>
+    <div class="inputs">
+      <app-input
+        label="Email"
+        [inputFormControl]="signInForm.controls.email"
+      ></app-input>
+      <app-input
+        label="Password"
+        type="password"
+        [inputFormControl]="signInForm.controls.password"
+      ></app-input>
+    </div>
+    <app-button
+      (clickEvent)="signIn()"
+      [enableSpinner]="isLoading === 'sign-in'"
+      text="Sign In"
+    ></app-button>
+  </div>
+</main>

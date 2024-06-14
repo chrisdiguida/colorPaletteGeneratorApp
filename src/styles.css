@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --app-blue: #146ef6;
+  --border-color: #e0e0e0;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.app-page {
+  width: 100vw;
+  min-height: 100vh;
+  max-width: 900px;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+.link {
+  color: var(--app-blue);
+}
+
+.link:hover {
+  text-decoration: underline;
+}

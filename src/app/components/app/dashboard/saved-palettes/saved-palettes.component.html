@@ -1,0 +1,54 @@
+<div class="saved-palettes-section">
+  <div class="filters">
+    <app-input
+      [inputFormControl]="filterFormControl"
+      label="Search"
+      placeholder="Search by name or color"
+    ></app-input>
+    <app-spinner [spinning]="loadingSource === 'get-all'"></app-spinner>
+  </div>
+  <p>Here are listed your saved palettes.</p>
+  <app-palette
+    *ngFor="let palette of savedPalettes"
+    [palette]="palette"
+    actionText="Update Name"
+    secondActionText="Delete"
+    (onActionButtonClicked)="openUpdatePaletteModal(palette)"
+    (onSecondActionButtonClicked)="openDeletePaletteModal(palette)"
+  ></app-palette>
+</div>
+<app-modal
+  [title]="'Delete Palette ' + paletteToDelete?.name"
+  (closeModal)="paletteToDelete = null"
+  [showModal]="!!paletteToDelete"
+  width="400px"
+  height="250px"
+>
+  <div class="palette-modal-container delete-palette-modal-container">
+    <p>Are you sure to delete this palette?</p>
+    <app-button
+      [enableSpinner]="loadingSource === 'delete'"
+      text="Delete"
+      (clickEvent)="deletePalette()"
+    ></app-button>
+  </div>
+</app-modal>
+<app-modal
+  [title]="'Update Palette Name ' + paletteToUpdate?.name"
+  (closeModal)="paletteToUpdate = null"
+  [showModal]="!!paletteToUpdate"
+  width="400px"
+  height="250px"
+>
+  <div class="palette-modal-container">
+    <app-input
+      [inputFormControl]="paletteNameFormControl"
+      label="Name"
+    ></app-input>
+    <app-button
+      [enableSpinner]="loadingSource === 'update'"
+      text="Create"
+      (clickEvent)="updatePalette()"
+    ></app-button>
+  </div>
+</app-modal>

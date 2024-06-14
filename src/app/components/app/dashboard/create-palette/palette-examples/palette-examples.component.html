@@ -1,0 +1,60 @@
+<p class="title">Examples</p>
+<div *ngIf="generatedPalette" class="examples-section">
+  <div class="ui-example">
+    <p>Today</p>
+    <div
+      [style.background-color]="generatedPalette.colors[1].color"
+      [style.border-color]="generatedPalette.colors[5].color"
+      class="task"
+    >
+      <p [style.color]="generatedPalette.colors[8].color">Design meeting</p>
+      <p [style.color]="generatedPalette.colors[7].color">9 - 10 AM</p>
+    </div>
+    <div
+      [style.background-color]="generatedPalette.colors[1].color"
+      [style.border-color]="generatedPalette.colors[5].color"
+      class="task"
+    >
+      <p [style.color]="generatedPalette.colors[8].color">Launch</p>
+      <p [style.color]="generatedPalette.colors[7].color">1 - 2 PM</p>
+    </div>
+    <div
+      [style.background-color]="generatedPalette.colors[1].color"
+      [style.border-color]="generatedPalette.colors[5].color"
+      class="task"
+    >
+      <p [style.color]="generatedPalette.colors[8].color">Design review</p>
+      <p [style.color]="generatedPalette.colors[7].color">4 - 5 PM</p>
+    </div>
+  </div>
+  <div class="ui-example">
+    <p>Buttons</p>
+    <app-button
+      text="Default"
+      [backgroundColor]="generatedPalette.colors[4].color"
+    ></app-button>
+    <app-button
+      text="Hover"
+      [backgroundColor]="generatedPalette.colors[5].color"
+    ></app-button>
+    <app-button
+      text="Active"
+      [backgroundColor]="generatedPalette.colors[6].color"
+    ></app-button>
+    <app-button
+      text="Disabled"
+      [backgroundColor]="generatedPalette.colors[0].color"
+      [textColor]="generatedPalette.colors[3].color"
+    ></app-button>
+  </div>
+  <div class="ui-example">
+    <div
+      [style.background-color]="generatedPalette.colors[8].color"
+      class="text"
+    >
+      <p [style.color]="generatedPalette.colors[0].color">
+        Create color palettes in seconds
+      </p>
+    </div>
+  </div>
+</div>

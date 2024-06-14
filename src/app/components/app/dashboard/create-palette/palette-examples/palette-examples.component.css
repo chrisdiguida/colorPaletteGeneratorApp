@@ -1,0 +1,49 @@
+.examples-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.ui-example {
+  border-radius: 12px;
+  height: 250px;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 8%) 0px 1px 2px, rgb(0 0 0 / 5%) 0px 4px 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid #d4d4d8;
+}
+
+.task {
+  padding: 10px;
+  border-left: 4px solid black;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.task > p:first-of-type {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.ui-example:last-of-type {
+  background-image: url("/assets/image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ui-example:last-of-type > .text {
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 10px;
+}

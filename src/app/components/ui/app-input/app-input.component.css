@@ -1,0 +1,48 @@
+.app-input-container {
+  width: 100%;
+}
+
+.label-container {
+  display: flex;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #344054;
+}
+
+input {
+  padding: 10px 40px 10px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  width: 100%;
+  transition: all 0.1s;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+input:not([disabled]):active,
+input:not([disabled]):focus,
+input:not([disabled]):hover {
+  border-color: var(--app-blue);
+  outline: none !important;
+}
+
+input:not([disabled]):focus {
+  transition: none;
+  border-width: 2px;
+}
+
+input:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+.inputErrorMessage {
+  color: red;
+  font-size: 13px;
+  height: 20px;
+  margin-top: 5px;
+}

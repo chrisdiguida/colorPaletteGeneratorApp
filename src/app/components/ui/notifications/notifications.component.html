@@ -1,0 +1,20 @@
+<div class="notifications-container">
+  <div
+    [ngClass]="{ fadeIn: notification.fadeIn }"
+    class="notification"
+    *ngFor="let notification of notifications; let i = index"
+  >
+    <div>
+      <i [class]="'material-icons notranslate ' + notification.type">{{
+        defineIcon(notification)
+      }}</i>
+    </div>
+    <div>
+      <p>
+        <b [class]="notification.type">{{ notification.title }}</b>
+      </p>
+      <p class="mt-2">{{ notification.message }}</p>
+      <p class="link pointer" (click)="dismiss(i)">Dismiss</p>
+    </div>
+  </div>
+</div>

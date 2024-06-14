@@ -1,0 +1,35 @@
+<div class="create-palette-section">
+  <div class="palette-generator-container">
+    <p>Enter a HEX code to create a custom color scale</p>
+    <app-palette-generator-input
+      (onGeneratedPalette)="generatedPalette = $event"
+    ></app-palette-generator-input>
+  </div>
+  <app-palette
+    [palette]="generatedPalette"
+    [actionText]="defineActionText()"
+    (onActionButtonClicked)="openCreatePaletteModal()"
+  ></app-palette>
+  <app-palette-examples
+    [generatedPalette]="generatedPalette"
+  ></app-palette-examples>
+  <app-modal
+    [title]="'Create Palette ' + generatedPalette?.baseColor"
+    (closeModal)="closeCreatePaletteModal()"
+    [showModal]="showCreatePaletteModal"
+    width="400px"
+    height="250px"
+  >
+    <div class="create-palette-modal-container">
+      <app-input
+        [inputFormControl]="paletteNameFormControl"
+        label="Name"
+      ></app-input>
+      <app-button
+        [enableSpinner]="isLoading"
+        text="Create"
+        (clickEvent)="savePalette()"
+      ></app-button>
+    </div>
+  </app-modal>
+</div>

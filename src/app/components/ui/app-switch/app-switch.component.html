@@ -1,0 +1,10 @@
+<div class="switch-container">
+  <button
+    *ngFor="let option of options"
+    class="switch-button"
+    [class.active]="selectedOption === option.value"
+    (click)="selectOption(option)"
+  >
+    {{ option.text }}
+  </button>
+</div>

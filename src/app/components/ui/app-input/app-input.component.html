@@ -1,0 +1,21 @@
+<div class="app-input-container">
+  <div class="label-container">
+    <label *ngIf="label" [for]="'customInput-' + label"
+      ><b>{{ label }}</b>
+    </label>
+  </div>
+  <input
+    [id]="'customInput-' + label"
+    [placeholder]="placeholder"
+    [type]="type"
+    [formControl]="inputFormControl"
+    [ngClass]="{
+      redBorder: showErrorMessage()
+    }"
+  />
+  <div *ngIf="showErrorMessage()" class="inputErrorMessage mt-2">
+    <div *ngFor="let message of inputFormControl?.errors | keyvalue">
+      <span>{{ message.value }}</span>
+    </div>
+  </div>
+</div>

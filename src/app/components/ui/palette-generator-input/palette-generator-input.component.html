@@ -1,0 +1,25 @@
+<div class="palette-generator-input">
+  <input
+    (change)="setHexValue($event)"
+    [(ngModel)]="colorPickerHexValue"
+    type="color"
+  />
+  <input
+    [formControl]="hexValueFormControl"
+    maxlength="7"
+    placeholder="HEX Code"
+    type="text"
+  />
+  <div>
+    <app-spinner [spinning]="isLoading"></app-spinner>
+    <i (click)="randomizeHexColor()" class="material-icons notranslate"
+      >shuffle</i
+    >
+    <app-button (clickEvent)="generatePalette()" text="Generate"></app-button>
+  </div>
+  <div *ngIf="showErrorMessage()" class="error-message">
+    <div *ngFor="let message of hexValueFormControl?.errors | keyvalue">
+      <span>{{ message.value }}</span>
+    </div>
+  </div>
+</div>

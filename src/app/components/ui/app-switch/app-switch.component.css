@@ -1,0 +1,30 @@
+.switch-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.switch-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.switch-button:first-of-type {
+  border-radius: 9999px 0 0 9999px;
+}
+
+.switch-button:last-of-type {
+  border-radius: 0 9999px 9999px 0;
+}
+
+.switch-button.active {
+  background-color: var(--app-blue);
+  color: white;
+}

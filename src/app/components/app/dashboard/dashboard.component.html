@@ -1,0 +1,21 @@
+<main class="app-page">
+  <div class="user-info">
+    <div class="user-icon">
+      <p>{{ defineAppUserIconInitials() }}</p>
+    </div>
+    <p>{{ appUser?.email }}</p>
+    <app-button
+      (clickEvent)="signOut()"
+      [isWhite]="true"
+      text="Sign Out"
+    ></app-button>
+  </div>
+  <h1>Color Palettes Generator</h1>
+  <app-switch
+    [options]="appSwitchOptions"
+    (optionChanged)="onSwitchChanged($event.value)"
+  ></app-switch>
+  <div class="router-container">
+    <router-outlet></router-outlet>
+  </div>
+</main>

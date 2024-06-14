@@ -1,0 +1,27 @@
+<div *ngIf="palette" class="app-palette-container">
+  <div class="app-palette-header">
+    <div *ngIf="palette.name" class="palette-info">
+      <p>Name: {{ palette.name }}</p>
+      <p>Base Color: {{ palette.baseColor }}</p>
+    </div>
+    <div class="palette-actions">
+      <p (click)="exportAsCssToClipboard()">{{ exportText }}</p>
+      <p (click)="onActionButtonClicked.emit()">{{ actionText }}</p>
+      <p (click)="onSecondActionButtonClicked.emit()">{{ secondActionText }}</p>
+    </div>
+  </div>
+  <div class="palette">
+    <div
+      [ngStyle]="{
+        'background-color': color.color,
+        color: definePaletteTextColor(color.color)
+      }"
+      class="palette-color"
+      *ngFor="let color of palette.colors"
+      (click)="copyColorToClipboard(color.color)"
+    >
+      <p>{{ color.boldness }}</p>
+      <p>{{ defineColorText(color.color) }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="app-button-container">
+  <button
+    [style.background-color]="backgroundColor"
+    [ngClass]="{
+      'app-icon-button': !text,
+      whiteButton: isWhite,
+      disabledButton: disabled || enableSpinner ,
+    }"
+    [disabled]="disabled || enableSpinner"
+    [type]="type"
+    (click)="emitClick($event)"
+  >
+    <i *ngIf="materialIcon" class="material-icons notranslate i-right">{{
+      materialIcon
+    }}</i>
+    <span [style.color]="textColor" *ngIf="!enableSpinner">{{ text }}</span>
+    <app-spinner *ngIf="enableSpinner"></app-spinner>
+  </button>
+</div>

@@ -1,0 +1,14 @@
+<div *ngIf="showModal" class="modal-background">
+  <div class="modal-content-container" [style.width]="width" [style.height]="height">
+    <div class="header">
+      <div>
+        <h3 class="title">{{ title }}</h3>
+        <p>{{ description }}</p>
+      </div>
+      <i *ngIf="allowClose" (click)="emitCloseDialog($event)" class="material-icons notranslate pointer">close</i>
+    </div>
+    <div class="modal-content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
