@@ -23,12 +23,12 @@ This project consists of Color Palette Generator. By inserting a HEX color, it i
 - **Password Hashing**: On the back-end we are storing the password through an hashing algorith to respect the security standards.
 - **JWT authentication**: On the back-end we are implementing JWT authentication to secure our API.
 
-##### Screenshots
-
 **Sign Up**
+
 ![image](https://github.com/chrisdiguida/colorPaletteGeneratorApp/assets/171926333/b7313361-d8dc-4482-809b-34afd20bf965)
 
 **Sign In**
+
 ![image](https://github.com/chrisdiguida/colorPaletteGeneratorApp/assets/171926333/a492cd3c-ac8e-4a6c-8c93-310ea974a721)
 
 ### Palette Generation
